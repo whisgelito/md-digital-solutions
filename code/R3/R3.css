@@ -1,0 +1,187 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+
+/* Fisrt Mobile */
+
+
+/* modal */
+
+.video-container {
+    position: fixed;
+    top: 20%;
+    left: 7.5%;
+    width: 85%;
+    height: 40%;
+    z-index: 99999;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    border-radius: .3em;
+    box-shadow: 1px 5px 127px rgba(0, 0, 0);
+}
+
+.video-container .close {
+    position: absolute;
+    top: 7%;
+    right: .5em;
+    width: 1.5em;
+}
+
+.video-container iframe {
+    width: 80%;
+    height: 8em;
+    max-width: 25em;
+    transform: scale(0);
+    outline: none;
+    transition: all 0.3;
+}
+
+.video-container.show {
+    pointer-events: all;
+    opacity: 1;
+}
+
+.video-container.show iframe {
+    transform: scale(1);
+}
+
+
+/* end modal */
+
+
+/* Card */
+
+.container-card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    width: 18em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 1px 3px 15px;
+    border-radius: .1em;
+    overflow: hidden;
+}
+
+.image-card {
+    width: 100%;
+}
+
+.content-card {
+    background-color: #fff;
+    width: 16em;
+    padding: 1em;
+}
+
+.image-card {
+    background-color: #fff;
+}
+
+img {
+    width: 100%;
+}
+
+.icon {
+    position: absolute;
+    width: 4em;
+    right: 40%;
+    top: 14%;
+    line-height: 44px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 20;
+}
+
+
+/* end card */
+
+
+/* End First Mobile */
+
+
+/*Web*/
+
+@media screen and (min-width: 993px) {
+    .card {
+        flex-direction: row;
+        width: 80%;
+    }
+    .icon {
+        left: 15%;
+        top: 0%;
+    }
+    .image-card {
+        width: 35%;
+    }
+    .content-card {
+        width: 65%;
+        padding: 2em;
+    }
+    img {
+        height: 100%;
+    }
+    .video-container iframe {
+        height: 20em;
+        width: 36em;
+    }
+    .video-container {
+        height: 27em;
+        width: 45em;
+        left: 29%;
+    }
+    .close {
+        top: 4%;
+    }
+}
+
+
+/*end web*/
+
+
+/*Tablet*/
+
+@media screen and (min-width:600px) and (max-width: 992px) {
+    .card {
+        flex-direction: row;
+        width: 80%;
+    }
+    .icon {
+        position: absolute;
+        left: 12%;
+        top: 0%;
+    }
+    .image-card {
+        width: 35%;
+    }
+    .content-card {
+        width: 65%;
+    }
+    img {
+        height: 100%;
+    }
+    .video-container iframe {
+        height: 15em;
+    }
+    .video-container {
+        height: 17em;
+        top: 2.5em;
+    }
+}
+
+
+/*End Tablet*/
