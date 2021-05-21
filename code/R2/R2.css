@@ -1,0 +1,134 @@
+:root {
+    --stripped: #f1f1f1;
+    --scroll-bg-thumb: #ccc;
+    --scroll-bg-thumb-h: #b3b3b3;
+    --scroll-bs-thumb-h: 0 0 2px 1px rgba(0, 0, 0, 0.2)3;
+    --scroll-bg-thumb-a: #999999;
+    --scroll-bg-track: #e1e1e1;
+    --scroll-bg-track-h-a: #d4d4d4;
+}
+
+
+/* First Mobile */
+
+body {
+    font-family: sans-serif;
+}
+
+.container {
+    overflow-x: auto;
+    padding: 0;
+    margin: 2em;
+}
+
+
+/*Scroll Bar*/
+
+.scroll::-webkit-scrollbar {
+    width: 0.5em;
+    height: 0.5em;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background: var(--scroll-bg-thumb);
+    border-radius: 0.25em;
+}
+
+.scroll::-webkit-scrollbar-thumb:hover {
+    background: var(--scroll-bg-thumb-h);
+    box-shadow: var(--scroll-bs-thumb-h);
+}
+
+.scroll::-webkit-scrollbar-thumb:active {
+    background-color: var(--scroll-bg-thumb-a);
+}
+
+.scroll::-webkit-scrollbar-track {
+    background: var(--scroll-bg-track);
+    border-radius: 0.25em;
+}
+
+.scroll::-webkit-scrollbar-track:hover,
+.scroll::-webkit-scrollbar-track:active {
+    background: var(--scroll-bg-track-h-a);
+}
+
+
+/*End scroll Bar*/
+
+
+/*Table*/
+
+tr:nth-child(odd) {
+    background-color: var(--stripped);
+}
+
+table {
+    border-radius: .3em;
+    border: solid 0.020em #999999;
+    width: 100%;
+    border-spacing: 0;
+}
+
+th {
+    background-color: #fff;
+}
+
+th,
+td {
+    min-width: 8em;
+    max-width: 8em;
+    width: 8em;
+    height: 2em;
+    padding: 1em;
+    border: 0.0020em solid #999999;
+}
+
+.item-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon {
+    width: 1em;
+}
+
+
+/*End Table*/
+
+
+/* End First Mobile */
+
+
+/*Web*/
+
+@media screen and (min-width: 993px) {
+    th,
+    td {
+        min-width: 10em;
+        max-width: 10em;
+        width: 10em;
+    }
+}
+
+
+/*end web*/
+
+
+/*Tablet*/
+
+@media screen and (min-width:600px) and (max-width: 992px) {
+    th,
+    td {
+        min-width: 10em;
+        max-width: 10em;
+        width: 10em;
+    }
+}
+
+
+/*End Table*/
